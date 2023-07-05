@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>form</title>
+  </head>
+  <body>
+    <h1>form DEMO</h1>
+    <form action="/anypath">
+      <button type="button">Do not submit the form</button>
+      <ol>
+        <li>
+          <div>
+            <label for="userName">Enter a UserName: </label>
+            <input name="userName" id="userName" placeholder="type='text'" />
+          </div>
+        </li>
+        <li>
+          <div>
+            <label for="password">Enter a Password: </label>
+            <input
+              type="password"
+              id="password"
+              placeholder="type='password'"
+            />
+          </div>
+        </li>
+        <li>
+          <div>
+            <label for="color">Enter a Color: </label>
+            <input type="color" id="color" />
+          </div>
+        </li>
+      </ol>
+      <button>Submit</button>
+    </form>
+
+    <br />
+    <hr />
+
+    <!-- https://www.google.com/search?q=frontend&
+      ei=cmmlZM6rKMC32roPk9S8mAM&ved=0ahUKEwjOrIfiz_f_AhXAm1YBHRMqDzMQ4dUDCBA&uact=5&oq=frontend&gs_
+      lcp=Cgxnd3Mtd2l6LXNlcnAQAzILCAAQgAQQsQMQgwEyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQ6CggAEEcQ1gQQsAM6EQguEIAEELEDEIMBEMcBENEDOgsILhCABBCxAxCDAToFCC4QgAQ6HwguEIAEELEDEIMBEMcBENEDEJcFENwEEN4EEOAEGAE6BwgAEIoFEEM6BwguEIoFEEM6DQguEIoFEMcBENEDEEM6FQguEIoFEEMQlwUQ3AQQ3gQQ4AQYAToLCC4QgAQQxwEQrwE6CgguEIoFENQCEEM6GwguEIoFEMcBENEDEEMQlwUQ3AQQ3gQQ4AQYAToECC4QA0oECEEYAFCeC1izHmC
+      _IGgDcAF4AIABoAGIAYAKkgEEMC4xMJgBAKABAcABAcgBCtoBBggBEAEYFA&sclient=gws-wiz-serp -->
+    <h2>Google Search Form</h2>
+    <form action="https://www.google.com/search">
+      <input type="text" name="q" />
+      <button>Search Google</button>
+    </form>
+
+    <br />
+    <hr />
+
+    <!-- 검색 후에 값으로 들어가는 부분까지 잘라보고 검색이 되는지 확인후에 
+    되면 잘라서 form 액션에 자른 부분을 넣어서 만들면 됨-->
+    <h3>Naver Search Form</h3>
+    <form action="https://search.naver.com/search.naver?">
+      <input type="text" name="query" />
+      <button>Search Naver</button>
+    </form>
+
+    <br />
+    <hr />
+
+    <h3>input: checkbox</h3>
+    <form action="#">
+      <div>
+        <input type="checkbox" id="male" name="male" checked />
+        <label for="male">남성이십니까?</label>
+        <!-- checked는 처음부터 check되어있도록 만들어 줌 -->
+      </div>
+      <div>
+        <input type="checkbox" id="female" name="female" />
+        <label for="female">여성이십니까?</label>
+      </div>
+      <div>
+        <input type="checkbox" id="both" name="both" />
+        <label for="both">양성이십니까?</label>
+      </div>
+      <button>확인</button>
+    </form>
+
+    <br />
+    <hr />
+
+    <h3>input: radio</h3>
+    <form action="/">
+      <p>
+        <label for="male">S:</label>
+        <input type="radio" id="sizeS" name="size" value="sizeS" />
+        <!-- value는 제출 시 서버에 전송되는 값을 뜻함 -->
+        <!-- 만약 L 사이즈 제출시 /?size=sizeL -->
+        <label for="female">M:</label>
+        <input type="radio" id="sizeM" name="size" value="sizeM" />
+
+        <label for="female">L:</label>
+        <input type="radio" id="sizeL" name="size" value="sizeL" />
+      </p>
+      <button>확인</button>
+    </form>
+
+    <br />
+    <hr />
+
+    <h3>select</h3>
+    <form action="#">
+      <label for="cooks">좋아하는 요리를 알려주세요.</label>
+      <div>
+        <select name="cooks" id="cook-select">
+          <option value="">--요리를 선택 해주세요--</option>
+          <!-- value가 빈값이면 제출 값도 없다. -->
+          <!-- 아니면 selected 속성을 이용해서 미리 체크 해둘수도 있다. -->
+          <option value="chicken">치킨</option>
+          <option value="hamburger">햄버거</option>
+          <option value="fish">생선</option>
+          <option value="ramen">라면</option>
+          <option value="vegetarian">채식</option>
+        </select>
+        <button>확인</button>
+      </div>
+
+      <!-- 참고로 드롭박스에서 제출된 값은 예를들면 치킨이 아니라 value="chicken"이다. -->
+    </form>
+
+    <br />
+    <hr />
+
+    <h3>input: range</h3>
+    <form action="#">
+      <div>
+        <label for="volume">오디오 조절: </label>
+        <input
+          type="range"
+          max="100"
+          min="0"
+          id="volume-range"
+          name="volume"
+          step="10"
+          value="70"
+        />
+        <!-- value = 초기값, step = 상세 조절 제한 -->
+        <button>확인</button>
+      </div>
+    </form>
+
+    <br />
+    <hr />
+
+    <h3>input: number</h3>
+    <form action="#">
+      <div>
+        <label for="num">수량 조절: </label>
+        <input
+          style="width: 100px"
+          type="number"
+          max="100"
+          min="0"
+          id="number"
+          name="number"
+          placeholder="1~100"
+          value="77"
+        />
+        <!-- value = 초기값, step = 상세 조절 제한 -->
+        <button>확인</button>
+      </div>
+    </form>
+
+    <br />
+    <hr />
+
+    <h3>textarea</h3>
+    <form action="#">
+      <label for="long-content">과제 입력칸</label> <br />
+      <textarea name="long-content" id="long-content" cols="27" rows="7">
+      </textarea>
+
+      <button>제출</button>
+    </form>
+
+    <h3>중간 테스트</h3>
+    <form>
+      <div>
+        <label for="userName">Username: </label>
+        <input
+          type="text"
+          name="userName"
+          id="userName"
+          placeholder="username"
+        />
+      </div>
+      <div>
+        <label for="userPassword">Password: </label>
+        <input
+          type="password"
+          name="userPassword"
+          id="userPassword"
+          placeholder="password"
+        />
+      </div>
+      <button>Register</button>
+    </form>
+
+    <h3>유효성 검사</h3>
+    <form action="/dummy">
+      <div>
+        <label for="first">First Name:</label>
+        <input type="text" name="first" id="first" required />
+        <!-- required 속성을 이용해서 필수 입력칸으로 만들 수 있다. -->
+      </div>
+      <div>
+        <label for="second">Second Name:</label>
+        <input
+          style="margin-top: 5px"
+          type="password"
+          name="second"
+          id="second"
+          minlength="8"
+          maxlength="20"
+          required
+        />
+      </div>
+      <button>submit</button>
+    </form>
+  </body>
+</html>
