@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid #000;
+      }
+
+      thead {
+        background-color: black;
+        color: aliceblue;
+      }
+    </style>
+    <title>Section_5</title>
+  </head>
+  <!-- td: 단일 셀 -->
+  <!-- tr: table row -->
+  <!-- th: 헤더를 정의, 
+    헤더를 하나로 만들것이 아니라면 열의 개수에 맞춰서 헤더가 있는것이 좋음-->
+
+  <body>
+    <h1>table 연습 1</h1>
+    <table>
+      <tr>
+        <th>제목1</th>
+        <th>제목2</th>
+        <th>제목3</th>
+        <th>제목4</th>
+      </tr>
+      <tr>
+        <td>내용1</td>
+        <td>내용2</td>
+        <td>내용3</td>
+        <td>내용4</td>
+      </tr>
+
+      <tr>
+        <td>내용5</td>
+        <td></td>
+        <td></td>
+        <!-- 만약에 칸을 맞추고 싶을 경우 내용없이 td사용 -->
+        <td>내용8</td>
+      </tr>
+    </table>
+
+    <br />
+    <hr />
+    <br />
+
+    <h2>table 연습 2</h2>
+    <table>
+      <thead>
+        <tr>
+          <th colspan="100%">테이블 헤더</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>tr 태그</td>
+          <td>tr태그는 table row로써 <br />tr태그 하나 === row 한줄</td>
+          <td>예를 들면 tr내에 td가 3개가 있다고 한다면</td>
+          <td>행 하나에 열이 3개가 있는 테이블 꼴이 생긴다.</td>
+          <td>또 tr태그내에는 바로 내용을 쓸수 없다.</td>
+        </tr>
+        <tr>
+          <td>td 태그</td>
+          <td>td란 실질적인 내용이 들어가는 단일 셀이다.</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
