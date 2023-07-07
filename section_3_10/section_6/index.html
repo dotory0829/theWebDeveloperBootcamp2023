@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>section6_CSS</title>
+    <style>
+      h1 {
+        color: white;
+        text-shadow: 2px 2px 4px #000000;
+        font-family: 'Courier New', Courier, monospace;
+      }
+      hr {
+        border: 0px;
+        border-top: 3px dotted #663399;
+      }
+    </style>
+    <link rel="stylesheet" href="./external.css" />
+    <!-- 새로운 시트 연결시마다 link 사용하면 됨 -->
+  </head>
+  <body>
+    <!-- Inline 스타일: HTML 태그의 style 속성에 CSS 코드를 넣어 적용시키는 방법  -->
+    <!-- 쓰지말자(재사용이 불가능하다는 단점)  -->
+    <!-- <h1 style="text-shadow: 2px 2px 4px gray">Hello World</h1> -->
+
+    <!--  Internal Style 인라인보단 나은데 쓰지말자-->
+    <h1>I am h1 Tag (Internal Style)</h1>
+    <br />
+    <hr />
+    <br />
+    <div>
+      <h2>I am h2 Tag (External Style)</h2>
+      <button>Click Me!!!</button>
+    </div>
+    <br />
+    <hr />
+    <br />
+    <p id="lorem-1">
+      <b>text-align: center: <br /></b>
+      1. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil maiores
+      iure magnam laudantium excepturi, nostrum voluptates cupiditate
+      repellendus atque ad molestiae assumenda ullam voluptatum sit recusandae,
+      illo quis natus itaque!
+    </p>
+    <p id="lorem-2">
+      font-weight: 700; <br />
+      letter-spacing: 5px; <br /><br />
+      2. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil maiores
+      iure magnam laudantium excepturi, nostrum voluptates cupiditate
+      repellendus atque ad molestiae assumenda ullam voluptatum sit recusandae,
+      illo quis natus itaque!
+    </p>
+    <p id="lorem-3">
+      <b
+        >text-align: right; <br />
+        text-decoration: #663399 underline wavy; <br />
+        line-height: 2; <br
+      /></b>
+      3. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil maiores
+      iure magnam laudantium excepturi, nostrum voluptates cupiditate
+      repellendus atque ad molestiae assumenda ullam voluptatum sit recusandae,
+      illo quis natus itaque!
+    </p>
+
+    <br />
+    <hr />
+    <br />
+  </body>
+</html>

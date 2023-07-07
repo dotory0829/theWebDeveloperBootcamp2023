@@ -1,0 +1,33 @@
+/* external css 
+css에게 명령을 내리기 위해서는 세미 콜론이 필요함
+*/
+h2 {
+  color: #663399;
+  text-shadow: purple 3px 3px 3px;
+  font-weight: 300;
+}
+
+button {
+  font-size: 20px;
+  background: #663399;
+  /* background-color: #663399;
+  background랑 background-color는 엄연히 다르며, background-color는
+  컬러만을 변경하기 위한 좁은 버전임 */
+  color: aliceblue;
+}
+
+#lorem-1 {
+  text-align: center;
+}
+
+#lorem-2 {
+  font-weight: 700;
+  letter-spacing: 5px;
+}
+
+#lorem-3 {
+  text-align: right;
+  text-decoration: #663399 underline wavy;
+  /* 줄 간격 */
+  line-height: 2;
+}
