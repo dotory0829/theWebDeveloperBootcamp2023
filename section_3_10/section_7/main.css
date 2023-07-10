@@ -1,0 +1,60 @@
+/* common */
+body {
+  background-color: #0496ff;
+}
+h1 {
+  color: aliceblue;
+  font-weight: 100;
+  font-size: 40px;
+}
+
+/* header */
+#login {
+  font-size: 20px;
+  border-radius: 20px;
+  background-color: #ffbc42;
+  color: aliceblue;
+  cursor: pointer;
+  border: none;
+}
+#signup {
+  font-size: 20px;
+  border-radius: 20px;
+  background-color: #d81159;
+  color: aliceblue;
+  cursor: pointer;
+  border: none;
+}
+.search-label {
+  color: aliceblue;
+}
+
+/* main */
+.post h2 {
+  color: #ffbc42;
+}
+.writer {
+  color: aliceblue;
+}
+
+.writer span {
+  color: #006ba6;
+}
+
+h2 + button {
+  font-size: 25px;
+}
+
+/* footer */
+
+footer li {
+  text-decoration: none;
+  font-size: 30px;
+}
+
+#naver {
+  color: #4cbb17;
+}
+#google {
+  color: #f4b400;
+}
